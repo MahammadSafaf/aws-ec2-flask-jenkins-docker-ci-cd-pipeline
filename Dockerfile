@@ -8,4 +8,4 @@ WORKDIR /app
 COPY . .
 
 # Run the app
-CMD ["python", "app.py"]
+CMD ["sh", "-c", "python app.py && tail -f /dev/null"]
