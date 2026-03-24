@@ -33,6 +33,26 @@ Developer → GitHub → Jenkins → Docker Build → AWS EC2 → Web Applicatio
 A simple Flask application running on port 5000 and accessible via browser.
 
 ---
+## Architecture Diagram
+
+flowchart LR
+
+A[Developer Code Push] --> B[GitHub Repository]
+
+B --> C[Jenkins CI/CD Pipeline]
+
+C --> D[Build Stage]
+D --> E[Docker Image Creation]
+
+E --> F[Docker Container Run]
+
+F --> G[AWS EC2 Instance (Ubuntu Linux Server)]
+
+G --> H[NGINX Web Server]
+
+H --> I[Browser / End User Access]
+
+---
 
 ## 🐳 Docker Setup
 
